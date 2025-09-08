@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comandos Linux e GIT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #220038;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px;
+      background-color: #1a002a;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      background: linear-gradient(to right, #00CFFF, #6D00B0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1.custom-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(to right, #00CFFF, #6D00B0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .accordion-button {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: linear-gradient(to right, #002B36, #320050);
+      color: #ffffff;
+    }
+
+    .accordion-body {
+      background-color: #1a1a1a;
+      border-left: 4px solid;
+      border-image: linear-gradient(to bottom, #00CFFF, #6D00B0) 1;
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #1a002a;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto; /* Faz o rodapé ficar na parte inferior */
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Comandos Linux e GIT</h1>
+  </header>
+
+  <div class="container" style="margin-top: 80px;">
+    <h1 class="custom-title"> Git & GitHub</h1>
+
+    <div class="accordion" id="accordionGit">
+
+      <!-- O que é o Git -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGit">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGit" aria-expanded="true" aria-controls="collapseGit">
+            📌 O que é o Git
+          </button>
+        </h2>
+        <div id="collapseGit" class="accordion-collapse collapse show" aria-labelledby="headingGit" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            Git é um sistema que ajuda a controlar as versões dos arquivos. Ele permite que várias pessoas trabalhem juntas em projetos de software.
+          </div>
+        </div>
+      </div>
+
+      <!-- O que é o GitHub -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGithub">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGithub" aria-expanded="false" aria-controls="collapseGithub">
+            📌 O que é o GitHub
+          </button>
+        </h2>
+        <div id="collapseGithub" class="accordion-collapse collapse" aria-labelledby="headingGithub" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            GitHub é uma plataforma online que armazena projetos que usam Git. Ela facilita a colaboração e o armazenamento de código.
+          </div>
+        </div>
+      </div>
+
+      <!-- Diferenças entre Git e GitHub -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingDiff">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiff" aria-expanded="false" aria-controls="collapseDiff">
+            ⚖️ Diferenças entre Git e GitHub
+          </button>
+        </h2>
+        <div id="collapseDiff" class="accordion-collapse collapse" aria-labelledby="headingDiff" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            <strong>Git:</strong> É uma ferramenta que você usa no seu computador para gerenciar versões.<br>
+            <strong>GitHub:</strong> É um site que armazena repositórios Git e ajuda na colaboração.
+          </div>
+        </div>
+      </div>
+
+      <!-- Comandos Linux no Git Bash -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingLinux">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLinux" aria-expanded="false" aria-controls="collapseLinux">
+            💻 Principais comandos Linux para usar o Git Bash
+          </button>
+        </h2>
+        <div id="collapseLinux" class="accordion-collapse collapse" aria-labelledby="headingLinux" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            <ul>
+              <li><code>ls</code> – lista arquivos e pastas</li>
+              <li><code>cd</code> – navega entre pastas</li>
+              <li><code>mkdir</code> – cria novas pastas</li>
+              <li><code>rm</code> – remove arquivos e pastas</li>
+              <li><code>clear</code> – limpa o terminal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comandos Linux do repositório -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingReadme">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReadme" aria-expanded="false" aria-controls="collapseReadme">
+            📂 Comandos Linux do repositório (README)
+          </button>
+        </h2>
+        <div id="collapseReadme" class="accordion-collapse collapse" aria-labelledby="headingReadme" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            Baseado no repositório <a href="https://github.com/caixetovisk/aula_git" target="_blank">aula_git</a>, alguns comandos importantes são:  
+            <ul>
+              <li><code>git init</code> – começa um novo repositório</li>
+              <li><code>git status</code> – verifica o estado do repositório</li>
+              <li><code>git add</code> – adiciona arquivos para serem salvos</li>
+              <li><code>git commit -m "mensagem"</code> – salva as mudanças feitas</li>
+              <li><code>git push</code> – envia as alterações para o GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Criar repositório -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingRepo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRepo" aria-expanded="false" aria-controls="collapseRepo">
+            📌 Como criar um repositório no GitHub
+          </button>
+        </h2>
+        <div id="collapseRepo" class="accordion-collapse collapse" aria-labelledby="headingRepo" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            Para criar um repositório, vá para o GitHub, clique em <strong>New Repository</strong>, preencha o nome e a descrição, e clique em <strong>Create Repository</strong>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Ligar projeto existente -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingLink">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLink" aria-expanded="false" aria-controls="collapseLink">
+            🔗 Como conectar um projeto existente da máquina ao GitHub
+          </button>
+        </h2>
+        <div id="collapseLink" class="accordion-collapse collapse" aria-labelledby="headingLink" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            <ul>
+              <li>Abra o projeto no terminal</li>
+              <li>Use <code>git init</code> para iniciar o repositório</li>
+              <li>Conecte ao GitHub com <code>git remote add origin &lt;link_do_repositório&gt;</code></li>
+              <li>Adicione arquivos e faça o primeiro commit</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Criar versão -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingVersion">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVersion" aria-expanded="false" aria-controls="collapseVersion">
+            📝 Como criar uma versão com Git
+          </button>
+        </h2>
+        <div id="collapseVersion" class="accordion-collapse collapse" aria-labelledby="headingVersion" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            Use os comandos:
+            <ul>
+              <li><code>git add .</code> – adiciona todos os arquivos para serem salvos</li>
+              <li><code>git commit -m "mensagem"</code> – cria uma nova versão do projeto</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enviar para o GitHub -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingPush">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePush" aria-expanded="false" aria-controls="collapsePush">
+            🚀 Como enviar da máquina para o GitHub
+          </button>
+        </h2>
+        <div id="collapsePush" class="accordion-collapse collapse" aria-labelledby="headingPush" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            Após fazer o commit, use:  
+            <code>git push origin main</code>  
+            (ou o nome da sua branch).
+          </div>
+        </div>
+      </div>
+
+      <!-- Comandos Básicos do Linux -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingLinuxBasic">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLinuxBasic" aria-expanded="false" aria-controls="collapseLinuxBasic">
+            💻 Comandos Básicos do Linux
+          </button>
+        </h2>
+        <div id="collapseLinuxBasic" class="accordion-collapse collapse" aria-labelledby="headingLinuxBasic" data-bs-parent="#accordionGit">
+          <div class="accordion-body">
+            Aqui estão alguns comandos básicos do Linux:
+            <ul>
+              <li><code>cd nome_da_pasta</code> – entra em uma pasta</li>
+              <li><code>ls nome_da_pasta</code> – lista o conteúdo de uma pasta</li>
+              <li><code>mkdir nome_da_pasta</code> – cria uma nova pasta</li>
+              <li><code>rm -r nome_da_pasta</code> – exclui uma pasta</li>
+              <li><code>mv nome_atual_do_arquivo nome_novo_do_arquivo</code> – renomeia um arquivo</li>
+              <li><code>mv nome_do_arquivo caminho_da_pasta/</code> – move um arquivo para outra pasta</li>
+              <li><code>cp nome_do_arquivo caminho_da_pasta_de_destino/</code> – copia um arquivo para outra pasta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 | Desenvolvido por <strong>Luiza Vittória Cardoso</strong>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
